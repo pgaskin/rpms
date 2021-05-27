@@ -1,0 +1,37 @@
+%define version_p1 3.38
+%define version_p2 1
+
+Name:		zuki-themes
+Version:	%{version_p1}.%{version_p2}
+Release:	1%{?dist}
+Summary:	Zuki themes
+License:	GPLv3
+URL:		https://github.com/lassekongo83/%{name}
+Source0:	%{url}/archive/v%{version_p1}-%{version_p2}.tar.gz
+
+BuildArch:	noarch
+BuildRequires:	meson
+BuildRequires:	sassc
+Requires:	filesystem
+Requires:	gtk-murrine-engine
+Requires:	gtk2-engines
+
+%description
+Zuki is a series of themes for GTK, gnome-shell and more.
+
+%prep
+%autosetup -n %{name}-%{version_p1}-%{version_p2} -p1
+
+%build
+%meson
+%meson_build
+
+%install
+%meson_install
+
+%files
+%license LICENSE
+%doc README.md
+%{_datadir}/themes/Zuki{-shell,tre,tre-dark,two,two-dark}
+
+%changelog
