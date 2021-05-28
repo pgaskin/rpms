@@ -35,3 +35,5 @@ PRoot is a user-space implementation of chroot, mount --bind, and binfmt_misc.
 %{_bindir}/proot
 
 %changelog
+Thu May 27 2021 Patrick Gaskin <patrick@pgaskin.net> - 5.2.0.alpha-1
+- Initial package.

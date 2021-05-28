@@ -96,3 +96,5 @@ exit 0
 %{_usrsrc}/%{module}-%{version}
 
 %changelog
+Thu May 27 2021 Patrick Gaskin <patrick@pgaskin.net> - 26-1
+- Initial package.

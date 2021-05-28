@@ -39,3 +39,5 @@ alttab is a X11 window switcher designed for minimalistic window managers or sta
 %{_mandir}/man1/alttab.1.gz
 
 %changelog
+Thu May 27 2021 Patrick Gaskin <patrick@pgaskin.net> - 1.6.0-1
+- Initial package.

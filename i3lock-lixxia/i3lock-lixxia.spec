@@ -60,3 +60,5 @@ install -Dpm0644 i3lock.1 %{buildroot}%{_mandir}/man1/i3lock.1
 %{_mandir}/man1/i3lock.1.gz
 
 %changelog
+Thu May 27 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-1.20210526gitbe2a08a
+- Initial package.
