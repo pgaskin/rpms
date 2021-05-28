@@ -5,6 +5,7 @@ Name:		zuki-themes
 Version:	%{version_p1}.%{version_p2}
 Release:	1%{?dist}
 Summary:	Zuki themes
+
 License:	GPLv3
 URL:		https://github.com/lassekongo83/%{name}
 Source0:	%{url}/archive/v%{version_p1}-%{version_p2}.tar.gz
@@ -12,6 +13,7 @@ Source0:	%{url}/archive/v%{version_p1}-%{version_p2}.tar.gz
 BuildArch:	noarch
 BuildRequires:	meson
 BuildRequires:	sassc
+
 Requires:	filesystem
 Requires:	gtk-murrine-engine
 Requires:	gtk2-engines

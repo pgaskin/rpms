@@ -4,11 +4,10 @@
 Name:		%{module}-dkms
 Version:	26
 Release:	1%{?dist}
-URL:		https://www.paragon-software.com/home/ntfs3-driver-faq/
 Summary:	NTFS read-write driver GPL implementation by Paragon Software
-License:	GPLv2
-BuildArch:	noarch
 
+License:	GPLv2
+URL:		https://www.paragon-software.com/home/ntfs3-driver-faq/
 Source0:        https://lore.kernel.org/lkml/20210402155347.64594-2-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~1.patch
 Source1:        https://lore.kernel.org/lkml/20210402155347.64594-3-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~2.patch
 Source2:        https://lore.kernel.org/lkml/20210402155347.64594-4-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~3.patch
@@ -18,6 +17,8 @@ Source5:        https://lore.kernel.org/lkml/20210402155347.64594-7-almaz.alexan
 Source6:        https://lore.kernel.org/lkml/20210402155347.64594-8-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~7.patch
 Source7:        https://lore.kernel.org/lkml/20210402155347.64594-9-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~8.patch
 Source8:	https://aur.archlinux.org/cgit/aur.git/plain/legacy_kernel.patch?h=ntfs3-dkms&id=de7decc2f54bcaa8e31c653c72d7f459563f34ec#/legacy_kernel.patch
+
+BuildArch:	noarch
 
 Provides:       kmod(%{module}.ko) = %{version}
 Requires:       dkms >= 2.2.0.3

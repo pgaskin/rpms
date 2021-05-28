@@ -8,6 +8,7 @@ Release:	1%{?dist}
 Provides:	i3lock = 2.12
 Conflicts:	i3lock
 Summary:	Simple X display locker like slock
+
 License:	MIT
 URL:		%{forgeurl}
 Source:		%{forgesource}
