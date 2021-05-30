@@ -5,8 +5,6 @@
 Name:		i3lock-lixxia
 Version:	0
 Release:	1%{?dist}
-Provides:	i3lock = 2.12
-Conflicts:	i3lock
 Summary:	Simple X display locker like slock
 
 License:	MIT
@@ -31,6 +29,9 @@ BuildRequires:	pkgconfig(xkbcommon-x11) >= 0.5.0
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	libev-devel
 BuildRequires:	pam-devel
+
+Provides:	i3lock = 2.12
+Conflicts:	i3lock
 
 %description
 i3lock is a simple screen locker like slock. After starting it, you will see a
@@ -61,5 +62,5 @@ install -Dpm0644 i3lock.1 %{buildroot}%{_mandir}/man1/i3lock.1
 %{_mandir}/man1/i3lock.1.gz
 
 %changelog
-Thu May 27 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-1.20210526gitbe2a08a
+* Thu May 27 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-1.20210526gitbe2a08a
 - Initial package.

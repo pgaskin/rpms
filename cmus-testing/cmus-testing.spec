@@ -101,5 +101,5 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
-Thu May 27 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-1.20210228git84db889
+* Thu May 27 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-1.20210228git84db889
 - Initial package.
