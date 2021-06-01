@@ -1,0 +1,36 @@
+name: i3lock-lixxia
+on:
+  push:
+    paths:
+      - i3lock-lixxia/**
+
+jobs:
+  copr:
+    name: copr
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Setup
+        run: |
+          pip3 install -I copr-cli==1.94
+      - name: Login
+        run: |
+          copr-cli --config <(echo "${COPR_CLI_CONFIG}") whoami
+        env:
+          COPR_CLI_CONFIG: ${{secrets.COPR_CLI_CONFIG}}
+      - name: Build
+        id: build
+        run: |
+          copr-cli --config <(echo "${COPR_CLI_CONFIG}") buildscm --clone-url "https://github.com/${{github.repository}}" --commit "${{github.sha}}" --subdir "${BUILD_DIR}" --spec "${BUILD_PACKAGE}.spec" --type git --method rpkg "${BUILD_REPO}" | sed -u 's/^Created builds: /::set-output name=build_id::/g'
+        env:
+          COPR_CLI_CONFIG: ${{secrets.COPR_CLI_CONFIG}}
+          BUILD_REPO: pgaskin/${{fromJSON('["i3lock-lixxia", "testing"]')[github.ref != 'refs/heads/master']}}
+          BUILD_DIR: i3lock-lixxia
+          BUILD_PACKAGE: i3lock-lixxia
+      - name: Download
+        run: |
+          copr-cli download-build --dest build "${{steps.build.outputs.build_id}}"
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: COPR Build
+          path: build/**
