@@ -1,5 +1,5 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   84db889e7bba0984a417afc8f40de7322011e5f2
+%global commit   48efe76879c80ff8cf051154673a840b3e657bc3
 %forgemeta
 
 Name:		cmus-testing
@@ -101,5 +101,19 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Tue Jun 01 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-1.20210601git48efe76
+- Update to latest commit.
+  - Update allavaz/smart-rg.
+  - Update gavtroy/dev_album_shuffle.
+  - Merge gavtroy/dev_wideterm.
+  - Update to upstream master.
+    - Includes allavaz/smart-rg.
+    - Includes gavtroy/dev_format_nested.
+    - Includes gavtroy/dev_wideterm.
+    - Includes gavtroy/dev_album_shuffle.
+  - Update gavtroy/dev_ignore_dups.
+  - Merge dryleev/fix-ffmpeg-freeze.
+  - Merge nefthy/flac-channel-map-fix.
+
 * Thu May 27 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-1.20210228git84db889
 - Initial package.
