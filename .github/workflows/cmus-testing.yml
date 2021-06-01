@@ -34,3 +34,42 @@ jobs:
         with:
           name: COPR Build
           path: build/**
+  cmus-testing-plugins-rpmfusion:
+    name: cmus-testing-plugins-rpmfusion
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        fedora:
+          - 34
+          - rawhide
+    container: fedora:${{matrix.fedora}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup
+        run: |
+          dnf install -y rpm-build yum-utils git-core rpmdevtools
+      - name: RPMFusion
+        run: |
+          dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(source /etc/os-release && echo -n $REDHAT_SUPPORT_PRODUCT_VERSION).noarch.rpm
+          dnf install -y https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(source /etc/os-release && echo -n $REDHAT_SUPPORT_PRODUCT_VERSION).noarch.rpm
+        env:
+          COPR_CLI_CONFIG: ${{secrets.COPR_CLI_CONFIG}}
+      - name: Dependencies
+        run: |
+          cd cmus-testing && yum-builddep -y cmus-testing-plugins-rpmfusion.spec && cd ..
+      - name: Sources
+        run: |
+          cd cmus-testing && spectool -gR cmus-testing-plugins-rpmfusion.spec && cd ..
+      - name: Build
+        run: |
+          cd cmus-testing && rpmbuild -ba cmus-testing-plugins-rpmfusion.spec && cd ..
+          mkdir build
+          mv "${HOME}/rpmbuild"/{S,}RPMS/* build/
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: cmus-testing-plugins-rpmfusion (fedora ${{matrix.fedora}})
+          path: build/**
