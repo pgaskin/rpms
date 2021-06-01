@@ -18,7 +18,7 @@
 		</td>
 		<td valign="top">
 			<b>alttab</b><br/>
-			<img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44290&style=flat-square&color=eee"/>
+			<a href="https://github.com/pgaskin/rpms/blob/master/alttab/alttab.spec"><img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44290&style=flat-square&color=eee"/></a>
 		</td>
 		<td valign="top">
 			<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/alttab/package/alttab/"><img src="https://copr.fedorainfracloud.org/coprs/pgaskin/alttab/package/alttab/status_image/last_build.png"/></a>
@@ -35,7 +35,7 @@
 		</td>
 		<td valign="top">
 			<b>cmus-testing</b><br/>
-			<img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44422&style=flat-square&color=eee&"/>
+			<a href="https://github.com/pgaskin/rpms/blob/master/cmus-testing/cmus-testing.spec"><img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44422&style=flat-square&color=eee&"/></a>
 		</td>
 		<td valign="top">
 			<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/cmus-testing/package/cmus-testing/"><img src="https://copr.fedorainfracloud.org/coprs/pgaskin/cmus-testing/package/cmus-testing/status_image/last_build.png"/></a>
@@ -44,7 +44,7 @@
 	<tr>
 		<td valign="top">
 			<b>cmus-testing-plugins-rpmfusion</b><br/>
-			<img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44422&style=flat-square&color=eee&"/>
+			<a href="https://github.com/pgaskin/rpms/blob/master/cmus-testing/cmus-testing-plugins-rpmfusion.spec"><img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44422&style=flat-square&color=eee&"/></a>
 		</td>
 		<td valign="top">
 			<a href="https://github.com/pgaskin/rpms/actions/workflows/cmus-testing.yml">
@@ -63,7 +63,7 @@
 		</td>
 		<td valign="top">
 			<b>i3lock-lixxia</b><br/>
-			<img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44292&style=flat-square&color=eee&"/>
+			<a href="https://github.com/pgaskin/rpms/blob/master/i3lock-lixxia/i3lock-lixxia.spec"><img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44292&style=flat-square&color=eee&"/></a>
 		</td>
 		<td valign="top">
 			<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/i3lock-lixxia/package/i3lock-lixxia/"><img src="https://copr.fedorainfracloud.org/coprs/pgaskin/i3lock-lixxia/package/i3lock-lixxia/status_image/last_build.png"/></a>
@@ -80,7 +80,7 @@
 		</td>
 		<td valign="top">
 			<b>ntfs3-dkms</b><br/>
-			<img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44353&style=flat-square&color=eee&"/>
+			<a href="https://github.com/pgaskin/rpms/blob/master/ntfs3-dkms/ntfs3-dkms.spec"><img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44353&style=flat-square&color=eee&"/></a>
 		</td>
 		<td valign="top">
 			<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/ntfs3-dkms/package/ntfs3-dkms/"><img src="https://copr.fedorainfracloud.org/coprs/pgaskin/ntfs3-dkms/package/ntfs3-dkms/status_image/last_build.png"/></a>
@@ -97,7 +97,7 @@
 		</td>
 		<td valign="top">
 			<b>proot</b><br/>
-			<img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44356&style=flat-square&color=eee&"/>
+			<a href="https://github.com/pgaskin/rpms/blob/master/proot/proot.spec"><img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44356&style=flat-square&color=eee&"/></a>
 		</td>
 		<td valign="top">
 			<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/proot/package/proot/"><img src="https://copr.fedorainfracloud.org/coprs/pgaskin/proot/package/proot/status_image/last_build.png"/></a>
@@ -114,7 +114,7 @@
 		</td>
 		<td valign="top">
 			<b>zuki-themes</b><br/>
-			<img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44316&style=flat-square&color=eee&"/>
+			<a href="https://github.com/pgaskin/rpms/blob/master/zuki-themes/zuki-themes.spec"><img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D44316&style=flat-square&color=eee&"/></a>
 		</td>
 		<td valign="top">
 			<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/zuki-themes/package/zuki-themes/"><img src="https://copr.fedorainfracloud.org/coprs/pgaskin/zuki-themes/package/zuki-themes/status_image/last_build.png"/></a>
@@ -122,3 +122,5 @@
 	</tr>
 </tbody>
 </table>
+
+Packages are available on <a href="https://copr.fedorainfracloud.org/coprs/pgaskin/">Fedora COPR</a> and via <a href="https://github.com/pgaskin/rpms/actions?query=branch%3Amaster">GitHub Actions artifacts</a>.
