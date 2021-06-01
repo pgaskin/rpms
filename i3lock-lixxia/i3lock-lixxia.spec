@@ -4,7 +4,7 @@
 
 Name:		i3lock-lixxia
 Version:	0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Simple X display locker like slock
 
 License:	MIT
@@ -62,5 +62,8 @@ install -Dpm0644 i3lock.1 %{buildroot}%{_mandir}/man1/i3lock.1
 %{_mandir}/man1/i3lock.1.gz
 
 %changelog
+* Thu Jun 01 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-2.20210526gitbe2a08a
+- Rebuild.
+
 * Thu May 27 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-1.20210526gitbe2a08a
 - Initial package.

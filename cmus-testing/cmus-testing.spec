@@ -4,7 +4,7 @@
 
 Name:		cmus-testing
 Version:	2.9.1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -101,6 +101,9 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Thu Jun 01 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-2.20210601git48efe76
+- Rebuild.
+
 * Tue Jun 01 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-1.20210601git48efe76
 - Update to latest commit.
   - Update allavaz/smart-rg.

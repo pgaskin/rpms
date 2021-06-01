@@ -3,26 +3,26 @@
 
 Name:		%{module}-dkms
 Version:	26
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	NTFS read-write driver GPL implementation by Paragon Software
 
 License:	GPLv2
 URL:		https://www.paragon-software.com/home/ntfs3-driver-faq/
-Source0:        https://lore.kernel.org/lkml/20210402155347.64594-2-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~1.patch
-Source1:        https://lore.kernel.org/lkml/20210402155347.64594-3-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~2.patch
-Source2:        https://lore.kernel.org/lkml/20210402155347.64594-4-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~3.patch
-Source3:        https://lore.kernel.org/lkml/20210402155347.64594-5-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~4.patch
-Source4:        https://lore.kernel.org/lkml/20210402155347.64594-6-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~5.patch
-Source5:        https://lore.kernel.org/lkml/20210402155347.64594-7-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~6.patch
-Source6:        https://lore.kernel.org/lkml/20210402155347.64594-8-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~7.patch
-Source7:        https://lore.kernel.org/lkml/20210402155347.64594-9-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~8.patch
+Source0:	https://lore.kernel.org/lkml/20210402155347.64594-2-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~1.patch
+Source1:	https://lore.kernel.org/lkml/20210402155347.64594-3-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~2.patch
+Source2:	https://lore.kernel.org/lkml/20210402155347.64594-4-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~3.patch
+Source3:	https://lore.kernel.org/lkml/20210402155347.64594-5-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~4.patch
+Source4:	https://lore.kernel.org/lkml/20210402155347.64594-6-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~5.patch
+Source5:	https://lore.kernel.org/lkml/20210402155347.64594-7-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~6.patch
+Source6:	https://lore.kernel.org/lkml/20210402155347.64594-8-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~7.patch
+Source7:	https://lore.kernel.org/lkml/20210402155347.64594-9-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~8.patch
 Source8:	https://aur.archlinux.org/cgit/aur.git/plain/legacy_kernel.patch?h=ntfs3-dkms&id=de7decc2f54bcaa8e31c653c72d7f459563f34ec#/legacy_kernel.patch
 
 BuildArch:	noarch
 
-Provides:       kmod(%{module}.ko) = %{version}
-Requires:       dkms >= 2.2.0.3
-Requires:       kernel-devel
+Provides:	kmod(%{module}.ko) = %{version}
+Requires:	dkms >= 2.2.0.3
+Requires:	kernel-devel
 
 %description
 This is fully functional NTFS Read-Write driver. Current version works with
@@ -97,5 +97,8 @@ exit 0
 %{_usrsrc}/%{module}-%{version}
 
 %changelog
+* Thu Jun 01 2021 Patrick Gaskin <patrick@pgaskin.net> - 26-2
+- Rebuild.
+
 * Thu May 27 2021 Patrick Gaskin <patrick@pgaskin.net> - 26-1
 - Initial package.
