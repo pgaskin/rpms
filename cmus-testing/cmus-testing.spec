@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   48efe76879c80ff8cf051154673a840b3e657bc3
+%global commit   a3e6caa2e6abf47fefe7c7052d582dd0d21d1201
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.9.1
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -101,7 +101,12 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
-* Thu Jun 01 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-2.20210601git48efe76
+* Wed Jun 02 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-3.20210602gita3e6caa
+- Update to latest commit.
+  - Includes dryleev/fix-ffmpeg-freeze.
+- Merge pgaskin/pl-env.
+
+* Tue Jun 01 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-2.20210601git48efe76
 - Rebuild.
 
 * Tue Jun 01 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-1.20210601git48efe76
