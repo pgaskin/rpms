@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   71ebcd382d20f1fdb06aa8cded21955caf08a80e
+%global commit   45c5a3199740268a60c1cf9dff1a5c752df0e062
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.9.1
-Release:	4%{?dist}
+Release:	5%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -101,6 +101,13 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Fri Jun 04 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-5.20210604git45c5a31
+- Update to upstream master.
+  - Includes pgaskin/fix-1093.
+- Update pgaskin/pl-env.
+- Merge pgaskin/fix-passwd-docs.
+- Merge pgaskin/remove-cache-with-track.
+
 * Thu Jun 03 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-4.20210603git71ebcd3
 - Update to upstream master.
   - Includes nefthy/flac-channel-map-fix.
