@@ -105,6 +105,23 @@
 	</tr>
 	<tr>
 		<td align="left" valign="top">
+			<b>zotero</b>
+			<p>Packages for <a href="https://www.zotero.org">Zotero</a>.</p>
+			<p>
+				<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/zotero"><img src="https://img.shields.io/badge/copr-pgaskin%2Fzotero-d38d5f?logo=fedora"/></a>
+				<a href="https://github.com/pgaskin/rpms/actions/workflows/zotero.yml"><img src="https://github.com/pgaskin/rpms/actions/workflows/zotero.yml/badge.svg?branch=master&event=push"/></a>
+			</p>
+		</td>
+		<td valign="top">
+			<b>zotero</b><br/>
+			<a href="https://github.com/pgaskin/rpms/blob/master/zotero/zotero.spec"><img src="https://img.shields.io/badge/dynamic/json?label=&query=%24.builds[0].build.package_version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_2%2Fbuilds%3Fproject_id%3D48859&style=flat-square&color=eee&"/></a>
+		</td>
+		<td valign="top">
+			<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/zotero/package/zotero/"><img src="https://copr.fedorainfracloud.org/coprs/pgaskin/zotero/package/zotero/status_image/last_build.png"/></a>
+		</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">
 			<b>zuki-themes</b>
 			<p>Packages for <a href="https://github.com/lassekongo87/zuki-themes">lassekongo87/zuki-themes</a>.</p>
 			<p>
