@@ -1,14 +1,11 @@
-%define version_p1 5.2.0
-%define version_p2 alpha
-
 Name:		proot
-Version:	%{version_p1}.%{version_p2}
-Release:	2%{?dist}
+Version:	5.2.0
+Release:	1%{?dist}
 Summary:	chroot, mount --bind, and binfmt_misc without privilege/setup for Linux
 
 License:	GPLv2
 URL:		https://github.com/proot-me/%{name}
-Source:	%{url}/archive/v%{version_p1}-%{version_p2}.tar.gz
+Source:		%{url}/archive/v%{version}.tar.gz
 
 BuildRequires:	gcc
 BuildRequires:	pkgconfig(talloc)
@@ -18,7 +15,7 @@ BuildRequires:	pkgconfig(libarchive)
 PRoot is a user-space implementation of chroot, mount --bind, and binfmt_misc.
 
 %prep
-%autosetup -n %{name}-%{version_p1}-%{version_p2} -p1
+%autosetup -n %{name}-%{version} -p1
 
 %build
 %make_build -C src loader.elf loader-m32.elf build.h PREFIX=%{_prefix}
@@ -37,6 +34,9 @@ PRoot is a user-space implementation of chroot, mount --bind, and binfmt_misc.
 %{_bindir}/proot
 
 %changelog
+* Sat Sep 11 2021 Patrick Gaskin <patrick@pgaskin.net> - 5.2.0-1
+- Rebuild.
+
 * Thu Jun 01 2021 Patrick Gaskin <patrick@pgaskin.net> - 5.2.0.alpha-2
 - Rebuild.
 
