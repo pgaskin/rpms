@@ -2,21 +2,16 @@
 %define module ntfs3
 
 Name:		%{module}-dkms
-Version:	26
-Release:	2%{?dist}
+Version:	27
+Release:	1%{?dist}
 Summary:	NTFS read-write driver GPL implementation by Paragon Software
 
 License:	GPLv2
 URL:		https://www.paragon-software.com/home/ntfs3-driver-faq/
-Source0:	https://lore.kernel.org/lkml/20210402155347.64594-2-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~1.patch
-Source1:	https://lore.kernel.org/lkml/20210402155347.64594-3-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~2.patch
-Source2:	https://lore.kernel.org/lkml/20210402155347.64594-4-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~3.patch
-Source3:	https://lore.kernel.org/lkml/20210402155347.64594-5-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~4.patch
-Source4:	https://lore.kernel.org/lkml/20210402155347.64594-6-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~5.patch
-Source5:	https://lore.kernel.org/lkml/20210402155347.64594-7-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~6.patch
-Source6:	https://lore.kernel.org/lkml/20210402155347.64594-8-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~7.patch
-Source7:	https://lore.kernel.org/lkml/20210402155347.64594-9-almaz.alexandrovich@paragon-software.com/raw#/%{name}-%{version}~8.patch
-Source8:	https://aur.archlinux.org/cgit/aur.git/plain/legacy_kernel.patch?h=ntfs3-dkms&id=de7decc2f54bcaa8e31c653c72d7f459563f34ec#/legacy_kernel.patch
+Source0:	https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/rawdiff/?id=f7464060f7ab9a2424428008f0ee9f1e267e410f&id2=6abaa83c7352b31450d7e8c173f674324c16b02b#/ntfs3.patch
+Source1:	https://aur.archlinux.org/cgit/aur.git/plain/kernel-5.12-backport.patch?h=ntfs3-dkms&id=57faff39920ed4815abcaa40349a19aa59e7ddf9#/kernel-5.12-backport.patch
+Source2:	https://aur.archlinux.org/cgit/aur.git/plain/kernel-5.14-backport.patch?h=ntfs3-dkms&id=57faff39920ed4815abcaa40349a19aa59e7ddf9#/kernel-5.14-backport.patch
+Source3:	https://aur.archlinux.org/cgit/aur.git/plain/kernel-5.15-backport.patch?h=ntfs3-dkms&id=57faff39920ed4815abcaa40349a19aa59e7ddf9#/kernel-5.15-backport.patch
 
 BuildArch:	noarch
 
@@ -32,22 +27,25 @@ replaying.
 %prep
 %setup -c -T -n %{name}-%{version}
 
-for patch in "%{SOURCE0}" "%{SOURCE1}" "%{SOURCE2}" "%{SOURCE3}" "%{SOURCE4}" "%{SOURCE5}" "%{SOURCE6}" "%{SOURCE7}"; do
-	patch -p3 -N -i "${patch}"
-done
+patch -p3 -t -N -i "%{SOURCE0}" || true
 
 mkdir patches
-cp "%{SOURCE8}" patches/legacy_kernel.patch
+cp "%{SOURCE1}" patches/kernel-5.12-backport.patch
+cp "%{SOURCE2}" patches/kernel-5.14-backport.patch
+cp "%{SOURCE3}" patches/kernel-5.15-backport.patch
 
 cat << 'EOF' > dkms.conf
 PACKAGE_NAME="%{module}"
 PACKAGE_VERSION="%{version}"
 BUILT_MODULE_NAME[0]="%{module}"
 DEST_MODULE_LOCATION[0]="/kernel/fs/%{module}"
-AUTOINSTALL="yes"
 MAKE[0]="KVERSION=$kernelver CONFIG_NTFS3_FS=m CONFIG_NTFS3_LZX_XPRESS=y CONFIG_NTFS3_FS_POSIX_ACL=y make KDIR=$kernel_source_dir"
-PATCH[0]="legacy_kernel.patch"
-PATCH_MATCH[0]="^([0-4]\.|5\.[0-9]\.|5\.1[0-1]\.).*"
+PATCH[0]="kernel-5.15-backport.patch"
+PATCH_MATCH[0]="^([0-4]\.|5\.[0-9]\.|5\.1[0-4]\.).*"
+PATCH[1]="kernel-5.14-backport.patch"
+PATCH_MATCH[1]="^([0-4]\.|5\.[0-9]\.|5\.1[0-3]\.).*"
+PATCH[2]="kernel-5.12-backport.patch"
+PATCH_MATCH[2]="^([0-4]\.|5\.[0-9]\.|5\.1[0-1]\.).*"
 EOF
 
 cat << 'EOF' >> Makefile
@@ -97,6 +95,10 @@ exit 0
 %{_usrsrc}/%{module}-%{version}
 
 %changelog
+* Tue Oct 05 2021 Patrick Gaskin <patrick@pgaskin.net> - 27-1
+- Update to final ntfs3 patches.
+- Update backport patches from the AUR package for 5.14+ compatibility.
+
 * Thu Jun 01 2021 Patrick Gaskin <patrick@pgaskin.net> - 26-2
 - Rebuild.
 
