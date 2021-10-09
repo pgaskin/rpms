@@ -4,7 +4,7 @@
 
 Name:		cmus-testing
 Version:	2.9.1
-Release:	7%{?dist}
+Release:	8%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -101,6 +101,9 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Sat Oct 09 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-8.20210608git462f7da
+- Bump release version for rebuild.
+
 * Tue Jun 08 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-7.20210608git462f7da
 - Update pgaskin/remove-cache-with-track.
 

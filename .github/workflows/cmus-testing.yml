@@ -41,6 +41,7 @@ jobs:
       matrix:
         fedora:
           - 34
+          - 35
           - rawhide
     container: fedora:${{matrix.fedora}}
     steps:
