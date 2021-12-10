@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   b4a917ced80b3a2f8851e3b464fded40f264ec7a
+%global commit   e4b590862fec40f6036eec0b2e88bfc4411d2a39
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.9.1
-Release:	9%{?dist}
+Release:	10%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -101,7 +101,10 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
-* Sat Dec 09 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-9.20211209gitb4a917c
+* Thu Dec 09 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-10.20211209gite4b5908
+- Update pgaskin/pause-on-output-change.
+
+* Thu Dec 09 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-9.20211209gitb4a917c
 - Update to upstream master.
 - Merge pgaskin/pause-on-output-change.
 
