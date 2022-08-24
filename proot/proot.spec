@@ -1,6 +1,6 @@
 Name:		proot
 Version:	5.3.1
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	chroot, mount --bind, and binfmt_misc without privilege/setup for Linux
 
 License:	GPLv2
@@ -34,6 +34,9 @@ PRoot is a user-space implementation of chroot, mount --bind, and binfmt_misc.
 %{_bindir}/proot
 
 %changelog
+* Wed Aug 24 2022 Patrick Gaskin <patrick@pgaskin.net> - 5.3.1-3
+- Rebuild.
+
 * Wed Aug 24 2022 Patrick Gaskin <patrick@pgaskin.net> - 5.3.1-2
 - Fix build.
 
