@@ -3,7 +3,7 @@
 %global __provides_exclude_from %{_libdir}/%{name}
 
 Name:		zotero
-Version:	5.0.96.3
+Version:	6.0.13
 Release:	1%{?dist}
 Summary:	Zotero desktop application
 
@@ -40,5 +40,8 @@ install -Dm644 %{buildroot}%{_libdir}/%{name}/chrome/icons/default/default256.pn
 %{_datadir}/icons/hicolor/*/apps/zotero.png
 
 %changelog
+* Wed Aug 24 2022 Patrick Gaskin <patrick@pgaskin.net> - 6.0.13-1
+- Update to 6.0.13.
+
 * Sat Sep 11 2021 Patrick Gaskin <patrick@pgaskin.net> - 5.0.96.3-1
 - Initial package.
