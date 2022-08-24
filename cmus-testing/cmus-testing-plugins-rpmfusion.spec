@@ -4,7 +4,7 @@
 
 Name:		cmus-testing-plugins-rpmfusion
 Version:	2.9.1
-Release:	10%{?dist}
+Release:	11%{?dist}
 Summary:	Plugins for ncurses-based music player with RPMFusion dependencies.
 
 License:	GPLv2+
@@ -81,6 +81,9 @@ make install-plugins DESTDIR=$RPM_BUILD_ROOT
 %{_libdir}/cmus/{ip,op}/*
 
 %changelog
+* Wed Aug 24 2022 Patrick Gaskin <patrick@pgaskin.net> - 0-11.20211209gite4b5908
+- Rebuild.
+
 * Thu Dec 09 2021 Patrick Gaskin <patrick@pgaskin.net> - 0-10.20211209gite4b5908
 - Update for latest cmus-testing release.
 
