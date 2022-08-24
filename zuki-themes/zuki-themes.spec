@@ -3,7 +3,7 @@
 
 Name:		zuki-themes
 Version:	%{version_p1}.%{version_p2}
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Zuki themes
 
 License:	GPLv3
@@ -37,6 +37,9 @@ Zuki is a series of themes for GTK, gnome-shell and more.
 %{_datadir}/themes/Zuki{-shell,tre,tre-dark,two,two-dark}
 
 %changelog
+* Wed Aug 24 2022 Patrick Gaskin <patrick@pgaskin.net> - 3.38.1-3
+- Rebuild.
+
 * Thu Jun 01 2021 Patrick Gaskin <patrick@pgaskin.net> - 3.38.1-2
 - Rebuild.
 
