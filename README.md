@@ -71,23 +71,6 @@
 	</tr>
 	<tr>
 		<td align="left" valign="top">
-			<b>ntfs3-dkms</b>
-			<p>Packages for Paragon's ntfs3 driver.</p>
-			<p>
-				<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/ntfs3-dkms"><img src="https://img.shields.io/badge/copr-pgaskin%2Fntfs3--dkms-d38d5f?logo=fedora"/></a>
-				<a href="https://github.com/pgaskin/rpms/actions/workflows/ntfs3-dkms.yml"><img src="https://github.com/pgaskin/rpms/actions/workflows/ntfs3-dkms.yml/badge.svg?branch=master&event=push"/></a>
-			</p>
-		</td>
-		<td valign="top">
-			<b>ntfs3-dkms</b><br/>
-			<a href="https://github.com/pgaskin/rpms/blob/master/ntfs3-dkms/ntfs3-dkms.spec"><img src="https://img.shields.io/badge/dynamic/json?color=%23eee&label=&query=%24.items[0].builds.latest_succeeded.source_package.version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_3%2Fpackage%2Flist%3Fprojectname%3Dntfs3-dkms%26ownername%3Dpgaskin%26with_latest_succeeded_build%3DTrue"/></a>
-		</td>
-		<td valign="top">
-			<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/ntfs3-dkms/package/ntfs3-dkms/"><img src="https://copr.fedorainfracloud.org/coprs/pgaskin/ntfs3-dkms/package/ntfs3-dkms/status_image/last_build.png"/></a>
-		</td>
-	</tr>
-	<tr>
-		<td align="left" valign="top">
 			<b>proot</b>
 			<p>Packages for <a href="https://github.com/proot/proot">proot</a>.</p>
 			<p>
