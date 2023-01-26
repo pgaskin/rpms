@@ -1,14 +1,11 @@
-%define version_p1 3.38
-%define version_p2 1
-
 Name:		zuki-themes
-Version:	%{version_p1}.%{version_p2}
-Release:	4%{?dist}
+Version:	4.0
+Release:	1%{?dist}
 Summary:	Zuki themes
 
 License:	GPLv3
 URL:		https://github.com/lassekongo83/%{name}
-Source0:	%{url}/archive/v%{version_p1}-%{version_p2}.tar.gz
+Source0:	%{url}/archive/v%{version}.tar.gz
 
 BuildArch:	noarch
 BuildRequires:	meson
@@ -22,7 +19,7 @@ Requires:	gtk2-engines
 Zuki is a series of themes for GTK, gnome-shell and more.
 
 %prep
-%autosetup -n %{name}-%{version_p1}-%{version_p2} -p1
+%autosetup -p1
 
 %build
 %meson
@@ -37,6 +34,9 @@ Zuki is a series of themes for GTK, gnome-shell and more.
 %{_datadir}/themes/Zuki{-shell,tre,tre-dark,two,two-dark}
 
 %changelog
+* Thu Jan 26 2023 Patrick Gaskin <patrick@pgaskin.net> - 4.0-1
+- Update to 4.0.
+
 * Wed Aug 24 2022 Patrick Gaskin <patrick@pgaskin.net> - 3.38.1-4
 - Rebuild.
 
