@@ -1,10 +1,12 @@
+%define lg_version B6
+
 Name:    looking-glass-client
-Version: 0~B6
+Version: 0~%{lg_version}
 Release: 1%{?dist}
 Summary: Low latency KVMFR implementation for guests with VGA PCI Passthrough (client)
 
 License: GPLv2
-Source0: https://github.com/gnif/LookingGlass/archive/refs/tags/B6.tar.gz
+Source0: https://github.com/gnif/LookingGlass/archive/refs/tags/%{lg_version}.tar.gz
 Source1: https://github.com/gnif/LGMP/archive/1b170ad8d732c8649d75f2ab71c11731661b0b96.tar.gz
 Source2: https://github.com/gnif/PureSpice/archive/247c57ee36110bc1d99e42355338a25ff2e483b0.tar.gz
 Source3: https://github.com/cimgui/cimgui/archive/261250f88f374e751b2de1501ba5c0c11e420b5a.tar.gz
@@ -67,9 +69,9 @@ programs that require high performance graphics.
 
 %prep
 cd "%{_builddir}"
-rm -rf LookingGlass-B6
+rm -rf LookingGlass-%{lg_version}
 /usr/lib/rpm/rpmuncompress -x -v "%{SOURCE0}" || exit $?
-cd LookingGlass-B6 || exit $?
+cd LookingGlass-%{lg_version} || exit $?
 /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
 
 rm -rf repos
@@ -90,12 +92,12 @@ rmdir cimgui/imgui && mv imgui-* cimgui/imgui || exit $?
 /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
 
 %build
-cd "%{_builddir}/LookingGlass-B6/client"
+cd "%{_builddir}/LookingGlass-%{lg_version}/client"
 %cmake -DENABLE_OPENGL=ON -DENABLE_EGL=ON -DENABLE_BACKTRACE=ON -DENABLEX11=ON -DENABLE_WAYLAND=ON -DENABLE_LIBDECOR=ON -DENABLE_PIPEWIRE=ON -DENABLE_PULSEAUDIO=ON
 %cmake_build
 
 %install
-cd "%{_builddir}/LookingGlass-B6/client"
+cd "%{_builddir}/LookingGlass-%{lg_version}/client"
 %cmake_install
 install -Dm644 %{SOURCE7} %{buildroot}%{_sysusersdir}/%{name}.conf
 install -Dm644 %{SOURCE8} %{buildroot}%{_tmpfilesdir}/%{name}.conf
@@ -113,5 +115,5 @@ usermod -aG looking-glass qemu 2>/dev/null || :
 %{_sysusersdir}/%{name}.conf
 
 %changelog
-* Thu Jan 26 2023 Patrick Gaskin <patrick@pgaskin.net> - B6.0.0-1
+* Thu Jan 26 2023 Patrick Gaskin <patrick@pgaskin.net> - 0~B6-1
 - Initial package.
