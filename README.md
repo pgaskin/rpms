@@ -137,6 +137,23 @@
 			<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/zuki-themes/package/zuki-themes/"><img src="https://copr.fedorainfracloud.org/coprs/pgaskin/zuki-themes/package/zuki-themes/status_image/last_build.png"/></a>
 		</td>
 	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<b>looking-glass-client</b>
+			<p>Packages for the <a href="https://looking-glass.io">looking-glass</a> client.</p>
+			<p>
+				<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/looking-glass-client"><img src="https://img.shields.io/badge/copr-pgaskin%2Flooking--glass--client-d38d5f?logo=fedora"/></a>
+				<a href="https://github.com/pgaskin/rpms/actions/workflows/looking-glass-client.yml"><img src="https://github.com/pgaskin/rpms/actions/workflows/looking-glass-client.yml/badge.svg?branch=master&event=push"/></a>
+			</p>
+		</td>
+		<td valign="top">
+			<b>looking-glass-client</b><br/>
+			<a href="https://github.com/pgaskin/rpms/blob/master/looking-glass-client/looking-glass-client.spec"><img src="https://img.shields.io/badge/dynamic/json?color=%23eee&label=&query=%24.items[0].builds.latest_succeeded.source_package.version&url=https%3A%2F%2Fcopr.fedoraproject.org%2Fapi_3%2Fpackage%2Flist%3Fprojectname%3Dlooking-glass-client%26ownername%3Dpgaskin%26with_latest_succeeded_build%3DTrue"/></a>
+		</td>
+		<td valign="top">
+			<a href="https://copr.fedorainfracloud.org/coprs/pgaskin/looking-glass-client/package/looking-glass-client/"><img src="https://copr.fedorainfracloud.org/coprs/pgaskin/looking-glass-client/package/looking-glass-client/status_image/last_build.png"/></a>
+		</td>
+	</tr>
 </tbody>
 </table>
 
