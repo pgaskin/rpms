@@ -72,6 +72,7 @@ cd "%{_builddir}"
 rm -rf LookingGlass-%{lg_version}
 /usr/lib/rpm/rpmuncompress -x -v "%{SOURCE0}" || exit $?
 cd LookingGlass-%{lg_version} || exit $?
+echo "%{lg_version}" > VERSION
 /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
 
 rm -rf repos
