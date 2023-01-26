@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Setup
         run: |
-          pip3 install -I copr-cli==1.94
+          pip3 install -I copr-cli==1.105
       - name: Login
         run: |
           copr-cli --config <(echo "${COPR_CLI_CONFIG}") whoami
