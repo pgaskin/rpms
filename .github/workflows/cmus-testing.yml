@@ -40,10 +40,9 @@ jobs:
     strategy:
       matrix:
         fedora:
-          - 35
-          - 36
           - 37
-          - rawhide
+          - 38
+#          - rawhide
     container: fedora:${{matrix.fedora}}
     steps:
       - name: Checkout
