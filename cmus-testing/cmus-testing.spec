@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   83309568a563a3e8f789c9bc3cef2b43b3a80101
+%global commit   a52df51b476c7aba0b08ebe59d622a198ba95612
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.10.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -101,6 +101,13 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Thu Jul 13 2023 Patrick Gaskin <patrick@pgaskin.net> - 2.10.0-2.20230713gita52df51
+- Reset to upstream master.
+- Merge gavtroy/dev_ignore_dups.
+- Merge pgaskin/fix-passwd-docs.
+- Merge pgaskin/pl-env.
+- Merge rayes0/master (support italic text).
+
 * Sat Jul 08 2023 Patrick Gaskin <patrick@pgaskin.net> - 2.10.0-1.20230708git8330956
 - Update to upstream master.
 - Merge gavtroy/dont_search_in_filename.
