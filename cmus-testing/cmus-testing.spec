@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   5f0e861e4507655fe474d8c5cd3019add1f2e676
+%global commit   001f1a4806e48c9f298e41d047e43d669c9475c8
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.10.0
-Release:	4%{?dist}
+Release:	5%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -101,6 +101,15 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Sun Jul 16 2023 Patrick Gaskin <patrick@pgaskin.net> - 2.10.0-5.20230716git001f1a4
+- Update to upstream master.
+  - Includes origin/pa-no-drain.
+  - Includes VladislavGrudinin/clang-build-fix.
+  - Includes rayes0/master (support italic text).
+  - Includes feature detection for A_ITALIC (over rayes0/master).
+- Merge pgaskin/bracketed-paste.
+- Merge pgaskin/mouse-bar-right.
+
 * Sat Jul 15 2023 Patrick Gaskin <patrick@pgaskin.net> - 2.10.0-4.20230715git5f0e861
 - Update to upstream master.
   - Includes pgaskin/pl-env.
