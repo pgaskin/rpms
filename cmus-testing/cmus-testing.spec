@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   d8a248a46900629c1726a10f4122ff0cb529b734
+%global commit   def777cecad32711b30da1f0b3b43a9d6481d19e
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.10.0
-Release:	6%{?dist}
+Release:	7%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -101,6 +101,15 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Sat Jul 22 2023 Patrick Gaskin <patrick@pgaskin.net> - 2.10.0-7.20230722gitdef777c
+- Reset to upstream master.
+- Merge pgaskin/fix-passwd-docs.
+- Merge pgaskin/bracketed-paste.
+- Merge pgaskin/mouse-bar-right.
+- Merge gavtroy/count-albumtracks.
+- Merge gavtroy/sort-albums-by-date.
+- Merge gavtroy/flat-library-view.
+
 * Sat Jul 22 2023 Patrick Gaskin <patrick@pgaskin.net> - 2.10.0-6.20230722gitd8a248a
 - Reset to upstream master.
 - Merge pgaskin/fix-passwd-docs.

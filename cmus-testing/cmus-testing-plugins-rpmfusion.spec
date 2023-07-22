@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   d8a248a46900629c1726a10f4122ff0cb529b734
+%global commit   def777cecad32711b30da1f0b3b43a9d6481d19e
 %forgemeta
 
 Name:		cmus-testing-plugins-rpmfusion
 Version:	2.10.0
-Release:	6%{?dist}
+Release:	7%{?dist}
 Summary:	Plugins for ncurses-based music player with RPMFusion dependencies.
 
 License:	GPLv2+
@@ -81,6 +81,9 @@ make install-plugins DESTDIR=$RPM_BUILD_ROOT
 %{_libdir}/cmus/{ip,op}/*
 
 %changelog
+* Sat Jul 22 2023 Patrick Gaskin <patrick@pgaskin.net> - 2.10.0-7.20230722gitdef777c
+- Update for latest cmus-testing release.
+
 * Sat Jul 22 2023 Patrick Gaskin <patrick@pgaskin.net> - 2.10.0-6.20230722gitd8a248a
 - Update for latest cmus-testing release.
 
