@@ -4,7 +4,7 @@
 
 Name:		cmus-testing
 Version:	2.10.0
-Release:	9%{?dist}
+Release:	10%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -101,6 +101,9 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Fri May 10 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.10.0-10.20231105git2c5aafc
+- Rebuild.
+
 * Sun Nov 05 2023 Patrick Gaskin <patrick@pgaskin.net> - 2.10.0-9.20231105git2c5aafc
 - Reset to upstream master.
 - Merge gavtroy/flat-library-view.

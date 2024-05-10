@@ -1,6 +1,6 @@
 Name:		alttab
 Version:	1.6.1
-Release:	4%{?dist}
+Release:	5%{?dist}
 Summary:	Task Switcher
 
 License:	GPL-3.0-only
@@ -41,6 +41,9 @@ alttab is a X11 window switcher designed for minimalistic window managers or sta
 %{_mandir}/man1/alttab.1.gz
 
 %changelog
+* Fri May 10 2024 Patrick Gaskin <patrick@pgaskin.net> - 1.6.1-5
+- Rebuild.
+
 * Sat Jul 08 2023 Patrick Gaskin <patrick@pgaskin.net> - 1.6.1-4
 - Rebuild.
 

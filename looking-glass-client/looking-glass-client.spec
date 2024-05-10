@@ -2,7 +2,7 @@
 
 Name:    looking-glass-client
 Version: 0~%{lg_version}
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: Low latency KVMFR implementation for guests with VGA PCI Passthrough (client)
 
 License: GPLv2
@@ -116,6 +116,9 @@ usermod -aG looking-glass qemu 2>/dev/null || :
 %{_sysusersdir}/%{name}.conf
 
 %changelog
+* Fri May 10 2024 Patrick Gaskin <patrick@pgaskin.net> - 0~B6-3
+- Rebuild.
+
 * Sat Jul 08 2023 Patrick Gaskin <patrick@pgaskin.net> - 0~B6-2
 - Rebuild.
 
