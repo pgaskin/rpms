@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   2c5aafca05e13c08714e2c4e5dafd67f1efa2b8a
+%global commit   2658824598453fe8f7123dd2c7f4d586c745f622
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.10.0
-Release:	10%{?dist}
+Release:	11%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -101,6 +101,12 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Fri May 10 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.10.0-10.20240510git2658824
+- Reset to upstream master.
+- Merge gavtroy/flat-library-view.
+- Merge gavtroy/cmdline-cursor-context.
+- Merge gavtroy/gapless-mp4.
+
 * Fri May 10 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.10.0-10.20231105git2c5aafc
 - Rebuild.
 
