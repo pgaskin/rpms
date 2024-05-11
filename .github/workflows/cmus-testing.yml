@@ -40,8 +40,8 @@ jobs:
     strategy:
       matrix:
         fedora:
-          - 37
           - 38
+          - 39
 #          - rawhide
     container: fedora:${{matrix.fedora}}
     steps:
