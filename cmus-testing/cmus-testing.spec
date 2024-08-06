@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   f4e4fb6dd74cf60ee0bb6641a688457478abd968
+%global commit   91ad60010aba08f4e8e991437a88e01f5d9bee00
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.11.0
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -101,6 +101,20 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Tue Aug 06 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-3.20240806git91ad600
+- cmus/master (cmus/cmus@d0a685d22ca510a911641044f3f7ff6f6b0cc6be)
+- gavtroy/flat-library-view (gavtroy/cmus@7697e0ab1a498793febb4819ee10cb3d14cea0d2)
+- gavtroy/cmdline-cursor-context (gavtroy/cmus@bcff68b0ef3a39cb377fb849d60e52b48514aecc)
+- gavtroy/gapless-mp4 (gavtroy/cmus@26c73fb6e2cf4a016c049c46fb3b869663ac9dc6)
+- gavtroy/part-is-disc (gavtroy/cmus@2b7b8d50b1e3f7f2f32d4380cb652c810d3c47cb)
+- gavtroy/resume-pl (gavtroy/cmus@ab16c5b28c30e5bd937fe0e00ed3e7c7e72e4e35)
+- adeason/fix-view-segv (adeason/cmus@40f42d5b2e62c0606e1d2fa33f0c67dc13a471d3)
+- pgaskin/aaudio (pgaskin/cmus@d9db94db24791a0b5dec654c21084fc2f0caeb57)
+- pgaskin/configure-fn-check (pgaskin/cmus@3de76fa47cbc3898a33290419fe3eb6bd867328c)
+- pgaskin/configure-cppflags (pgaskin/cmus@1c8544437af759fa7076177dbfc944ac9fea87c1)
+- pgaskin/configure-ncurses-cflags (pgaskin/cmus@c561a17bf9f44c62960b435f62d84010a7783bec)
+- pgaskin/ip-mad-double-close (pgaskin/cmus@30b9194b610d2a1828ee19d8a67294da585d334d)
+
 * Sat May 11 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-2.20240511gitf4e4fb6
 - Rebuild.
 
