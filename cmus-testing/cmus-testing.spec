@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   91ad60010aba08f4e8e991437a88e01f5d9bee00
+%global commit   bbfb75fe3c9da41f6a297a17695b2420d6551cba
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.11.0
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -101,6 +101,12 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Sat Sep 14 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-4.20240914gitbbfb75f
+- cmus/master (cmus/cmus@e8e24329273b2b50ec600539116fe9bba7048e53)
+- gavtroy/show-option-vals (gavtroy/cmus@f86df92e3218e896a41b87868cc1bfc8593668cd)
+- gavtroy/total-in-title (gavtroy/cmus@4651b0d806babb9261552ea6775440708ccf40b3)
+- gavtroy/progress-bar (gavtroy/cmus@dc99b9649f4311f5991ea7657778a4211217d64f)
+
 * Tue Aug 06 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-3.20240806git91ad600
 - cmus/master (cmus/cmus@d0a685d22ca510a911641044f3f7ff6f6b0cc6be)
 - gavtroy/flat-library-view (gavtroy/cmus@7697e0ab1a498793febb4819ee10cb3d14cea0d2)
