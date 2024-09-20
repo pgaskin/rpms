@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   bbfb75fe3c9da41f6a297a17695b2420d6551cba
+%global commit   257b2bf6ff14dead14bce492740337538a3ad789
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.11.0
-Release:	4%{?dist}
+Release:	5%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -42,12 +42,12 @@ systems.
 
 %build
 ./configure \
-	prefix=%{_prefix} \
-	bindir=%{_bindir} \
-	datadir=%{_datadir} \
-	libdir=%{_libdir} \
-	mandir=%{_mandir} \
-	exampledir=%{_datadir}/cmus/examples \
+	--prefix=%{_prefix} \
+	--bindir=%{_bindir} \
+	--datadir=%{_datadir} \
+	--libdir=%{_libdir} \
+	--mandir=%{_mandir} \
+	--docdir=%{_datadir}/cmus \
 	CONFIG_AAC=n \
 	CONFIG_ALSA=y \
 	CONFIG_AO=y \
@@ -101,6 +101,17 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Fri Sep 20 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-5.20240920git257b2bf
+- cmus/master (cmus/cmus@3af94b77adb4fb9bc6df2df37b9d4f03569030e2)
+- lagrang3/play_queue_total_time (Lagrang3/cmus@13f798075fb55db8b49e0edcc0c428739d89a829)
+- gavtroy/ffmpeg-dsd (gavtroy/cmus@406edec3206a228baeaa64e7468387f8c4e8ca1f)
+- pgaskin/coreaudio-master-main (pgaskin/cmus@7e6362c7ca500b09302d06cf92540ae838a01540)
+- pgaskin/fix-passwd-docs (pgaskin/cmus@0268810e82ed41a4539b16a3b1d67fda4eb030bb)
+- pgaskin/fix-doc-indent (pgaskin/cmus@8f76fad642b66fc3c88b223ed6c58fec49614a5c)
+- pgaskin/autoconf-compat (pgaskin/cmus@e40c4ff4950b3e8dd1e3b6aa89ccd40309da5439)
+- pgaskin/lm-ldflags (pgaskin/cmus@dafe605e84ee803b57acb875654caea0887a2291)
+- pgaskin/dump-plugins-default-priority (pgaskin/cmus@dc7ce1b7aca49172e04c310680a4bc8dfe32ed11)
+
 * Sat Sep 14 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-4.20240914gitbbfb75f
 - cmus/master (cmus/cmus@e8e24329273b2b50ec600539116fe9bba7048e53)
 - gavtroy/show-option-vals (gavtroy/cmus@f86df92e3218e896a41b87868cc1bfc8593668cd)
