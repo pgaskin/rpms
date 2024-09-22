@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   257b2bf6ff14dead14bce492740337538a3ad789
+%global commit   58caca8f50b974ca8977b65b8a553d22a083ab68
 %forgemeta
 
 Name:		cmus-testing-plugins-rpmfusion
 Version:	2.11.0
-Release:	5%{?dist}
+Release:	6%{?dist}
 Summary:	Plugins for ncurses-based music player with RPMFusion dependencies.
 
 License:	GPLv2+
@@ -13,8 +13,6 @@ Source:		%{forgesource}
 
 BuildRequires:	gcc
 BuildRequires:	pkgconfig(ncursesw)
-BuildRequires:	pkgconfig(libavformat)
-BuildRequires:	pkgconfig(libavcodec)
 BuildRequires:	faad2-devel
 BuildRequires:	libmp4v2-devel
 
@@ -23,7 +21,7 @@ Supplements:	cmus-testing = 2.11.0
 
 %description
 This package contains plugins for cmus requiring nonfree or restricted packages
-from RPMFusion, including the AAC, FFmpeg, and MP4 input plugins.
+from RPMFusion, including the AAC and MP4 input plugins.
 
 %prep
 %forgesetup
@@ -37,6 +35,7 @@ from RPMFusion, including the AAC, FFmpeg, and MP4 input plugins.
 	--mandir=%{_mandir} \
 	--docdir=%{_datadir}/cmus \
 	CONFIG_AAC=y \
+	CONFIG_AAUDIO=n \
 	CONFIG_ALSA=n \
 	CONFIG_AO=n \
 	CONFIG_ARTS=n \
@@ -45,7 +44,7 @@ from RPMFusion, including the AAC, FFmpeg, and MP4 input plugins.
 	CONFIG_COREAUDIO=n \
 	CONFIG_CUE=n \
 	CONFIG_DISCID=n \
-	CONFIG_FFMPEG=y \
+	CONFIG_FFMPEG=n \
 	CONFIG_FLAC=n \
 	CONFIG_JACK=n \
 	CONFIG_MAD=n \
@@ -81,6 +80,10 @@ make install-plugins DESTDIR=$RPM_BUILD_ROOT
 %{_libdir}/cmus/{ip,op}/*
 
 %changelog
+* Sun Sep 22 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-6.20240922git58caca8
+- Update for latest cmus-testing release.
+- Build ffmpeg plugin as part of free package (rpmfusion ffmpeg is a drop-in replacement).
+
 * Fri Sep 20 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-5.20240920git257b2bf
 - Update for latest cmus-testing release.
 

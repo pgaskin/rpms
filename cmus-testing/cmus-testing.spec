@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   257b2bf6ff14dead14bce492740337538a3ad789
+%global commit   58caca8f50b974ca8977b65b8a553d22a083ab68
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.11.0
-Release:	5%{?dist}
+Release:	6%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -13,6 +13,9 @@ Source:		%{forgesource}
 
 BuildRequires:	gcc
 BuildRequires:	pkgconfig(ncursesw)
+BuildRequires:	pkgconfig(libavformat)
+BuildRequires:	pkgconfig(libavcodec)
+BuildRequires:	pkgconfig(libswresample)
 BuildRequires:	pkgconfig(libdiscid)
 BuildRequires:	pkgconfig(libcddb)
 BuildRequires:	pkgconfig(libcdio_cdda)
@@ -49,6 +52,7 @@ systems.
 	--mandir=%{_mandir} \
 	--docdir=%{_datadir}/cmus \
 	CONFIG_AAC=n \
+	CONFIG_AAUDIO=n \
 	CONFIG_ALSA=y \
 	CONFIG_AO=y \
 	CONFIG_ARTS=n \
@@ -57,7 +61,7 @@ systems.
 	CONFIG_COREAUDIO=n \
 	CONFIG_CUE=y \
 	CONFIG_DISCID=y \
-	CONFIG_FFMPEG=n \
+	CONFIG_FFMPEG=y \
 	CONFIG_FLAC=y \
 	CONFIG_JACK=y \
 	CONFIG_MAD=y \
@@ -101,6 +105,13 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Sun Sep 22 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-6.20240922git58caca8
+- cmus/master (cmus/cmus@a92a0424ebbc9117ed1592fdd346d64c87af5f5a)
+- lagrang3/play_queue_total_time (Lagrang3/cmus@13f798075fb55db8b49e0edcc0c428739d89a829)
+- pgaskin/dump-plugins-default-priority (pgaskin/cmus@dc7ce1b7aca49172e04c310680a4bc8dfe32ed11)
+- pgaskin/coreaudio-master-main (pgaskin/cmus@7e6362c7ca500b09302d06cf92540ae838a01540)
+- build ffmpeg plugin as part of free package (rpmfusion ffmpeg is a drop-in replacement)
+
 * Fri Sep 20 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-5.20240920git257b2bf
 - cmus/master (cmus/cmus@3af94b77adb4fb9bc6df2df37b9d4f03569030e2)
 - lagrang3/play_queue_total_time (Lagrang3/cmus@13f798075fb55db8b49e0edcc0c428739d89a829)
