@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   b942bec583c09b2073d0f6174df9ffd8cd3fea0b
+%global commit   2d11ce164811c1eff2e2426ece59d47b81dd9c91
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.11.0
-Release:	7%{?dist}
+Release:	8%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -105,6 +105,16 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Mon Sep 23 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-8.20240923git2d11ce1
+- cmus/master (cmus/cmus@a92a0424ebbc9117ed1592fdd346d64c87af5f5a)
+- lagrang3/play_queue_total_time (Lagrang3/cmus@13f798075fb55db8b49e0edcc0c428739d89a829)
+- pgaskin/dump-plugins-default-priority (pgaskin/cmus@dc7ce1b7aca49172e04c310680a4bc8dfe32ed11)
+- pgaskin/coreaudio-master-main (pgaskin/cmus@7e6362c7ca500b09302d06cf92540ae838a01540)
+- pgaskin/workaround-tree-search-infinite-wrap (pgaskin/cmus@5ac406a415b7ce05e510e27fcdaea704ff1e69da)
+- pgaskin/fix-tree-search-infinite-wrap (pgaskin/cmus@e8ef999dee53fb72eb52100a83d4b02ec4b27531)
+- gavtroy/fix_attr_slip (gavtroy/cmus@cab4a9a19dff2d1642e58ba527216eca2fa9fd55)
+- pgaskin/fix-load-command-args (pgaskin/cmus@35f174d4d6df0d40669237b946f99314fd45dc2a)
+
 * Mon Sep 23 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-7.20240923gitb942bec
 - cmus/master (cmus/cmus@a92a0424ebbc9117ed1592fdd346d64c87af5f5a)
 - lagrang3/play_queue_total_time (Lagrang3/cmus@13f798075fb55db8b49e0edcc0c428739d89a829)
@@ -112,6 +122,7 @@ chmod -x examples/*
 - pgaskin/coreaudio-master-main (pgaskin/cmus@7e6362c7ca500b09302d06cf92540ae838a01540)
 - pgaskin/workaround-tree-search-infinite-wrap (pgaskin/cmus@5ac406a415b7ce05e510e27fcdaea704ff1e69da)
 - pgaskin/fix-tree-search-infinite-wrap (pgaskin/cmus@e8ef999dee53fb72eb52100a83d4b02ec4b27531)
+- gavtroy/fix_attr_slip (gavtroy/cmus@cab4a9a19dff2d1642e58ba527216eca2fa9fd55)
 
 * Sun Sep 22 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.11.0-6.20240922git58caca8
 - cmus/master (cmus/cmus@a92a0424ebbc9117ed1592fdd346d64c87af5f5a)
