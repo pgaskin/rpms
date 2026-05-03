@@ -7,11 +7,11 @@ on:
 jobs:
   copr:
     name: copr
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Setup
         run: |
-          pip3 install -I copr-cli==1.109
+          pip3 install -I copr-cli==2.5
       - name: Login
         run: |
           copr-cli --config <(echo "${COPR_CLI_CONFIG}") whoami
@@ -30,7 +30,7 @@ jobs:
         run: |
           copr-cli download-build --dest build "${{steps.build.outputs.build_id}}"
       - name: Upload
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: COPR Build
           path: build/**
