@@ -1,11 +1,15 @@
+%global forgeurl https://github.com/sagb/alttab
+%global commit   f4d1b5b5876fbf1542598f7422685ca5b980264f
+%forgemeta
+
 Name:		alttab
 Version:	1.7.1
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Task Switcher
 
 License:	GPL-3.0-only
-URL:		https://github.com/sagb/alttab
-Source:		%{url}/archive/v%{version}.tar.gz
+URL:		%{forgeurl}
+Source:		%{forgesource}
 
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -41,6 +45,9 @@ alttab is a X11 window switcher designed for minimalistic window managers or sta
 %{_mandir}/man1/alttab.1.gz
 
 %changelog
+* Sun May 03 2026 Patrick Gaskin <patrick@pgaskin.net> - 1.7.1-3.20260421gitf4d1b5b
+- Update to latest commit.
+
 * Sun May 03 2026 Patrick Gaskin <patrick@pgaskin.net> - 1.7.1-2
 - Rebuild.
 
