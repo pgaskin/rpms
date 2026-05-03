@@ -1,10 +1,10 @@
 %global forgeurl https://github.com/pgaskin/cmus
-%global commit   e328d34e28d379997d4bd56b2f63b67f1a993d16
+%global commit   a6b82eb2e38e24f8a7ceda5a2e0b191480513944
 %forgemeta
 
 Name:		cmus-testing
 Version:	2.12.0
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	ncurses-based music player
 
 License:	GPLv2+
@@ -105,6 +105,14 @@ chmod -x examples/*
 %{_mandir}/man7/cmus-tutorial.7.gz
 
 %changelog
+* Sun May 03 2026 Patrick Gaskin <patrick@pgaskin.net> - 2.12.0-3.20260503gita6b82eb
+- cmus/master (cmus/cmus@d335e90abd5d000eef128debcb979d852f0f6b7f)
+- gavtroy/system_wcwidth_fix (gavtroy/cmus@07f690188f1109ddcbf350263f20f7722d743248)
+- Endg4meZer0/master (Endg4meZer0/cmus@41e255716f62ff2e1659ac8f4d6b8507c6ca7179)
+- jdholtz/clear-marked-playlist (jdholtz/cmus@f538a3a50ec3d9858200a2424bc01b7dc4305716)
+- LunaPresent/master (LunaPresent/cmus@b2814bc3eb0d0c728b0c13d91b14caf544a357be)
+- jchook/playlists-are-sacred (jchook/cmus@e83c1e161171cc4482830381e094fcb11312668e)
+
 * Sun May 03 2026 Patrick Gaskin <patrick@pgaskin.net> - 2.12.0-2.20240923gite328d34
 - Rebuild.
 
