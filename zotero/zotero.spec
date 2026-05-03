@@ -4,7 +4,7 @@
 
 Name:		zotero
 Version:	6.0.13
-Release:	4%{?dist}
+Release:	5%{?dist}
 Summary:	Zotero desktop application
 
 License:	AGPLv3
@@ -40,6 +40,9 @@ install -Dm644 %{buildroot}%{_libdir}/%{name}/chrome/icons/default/default256.pn
 %{_datadir}/icons/hicolor/*/apps/zotero.png
 
 %changelog
+* Sun May 03 2026 Patrick Gaskin <patrick@pgaskin.net> - 6.0.13-5
+- Rebuild.
+
 * Fri May 10 2024 Patrick Gaskin <patrick@pgaskin.net> - 6.0.13-4
 - Rebuild.
 

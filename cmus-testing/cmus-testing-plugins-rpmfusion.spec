@@ -80,6 +80,9 @@ make install-plugins DESTDIR=$RPM_BUILD_ROOT
 %{_libdir}/cmus/{ip,op}/*
 
 %changelog
+* Sun May 03 2026 Patrick Gaskin <patrick@pgaskin.net> - 2.12.0-2.20240923gite328d34
+- Rebuild.
+
 * Sat Oct 26 2024 Patrick Gaskin <patrick@pgaskin.net> - 2.12.0-1.20240923gite328d34
 - Update for latest cmus-testing release.
 
